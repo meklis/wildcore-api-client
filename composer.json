@@ -1,0 +1,25 @@
+{
+    "name": "meklis/wildcore-api-client",
+    "description": "Rest API client for working with wildcore agent",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "7.4.x-dev",
+        "monolog/monolog": "2.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Meklis\\WildcoreApiClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Max Boyar",
+            "email": "max.boyar.a@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "wol-soft/php-json-schema-model-generator": "dev-master"
+    }
+}
