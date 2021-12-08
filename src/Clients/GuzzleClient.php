@@ -32,21 +32,21 @@ class GuzzleClient extends Client
 
     function post($uri, array $options = []): ResponseInterface
     {
-        $response = parent::get($uri, $options);
+        $response = parent::post($uri, $options);
         WildcoreApiClient::hasError($response);
         return $response;
     }
 
     function put($uri, array $options = []): ResponseInterface
     {
-        $response = parent::get($uri, $options);
+        $response = parent::put($uri, $options);
         WildcoreApiClient::hasError($response);
         return $response;
     }
 
     function delete($uri, array $options = []): ResponseInterface
     {
-        $response = parent::get($uri, $options);
+        $response = parent::delete($uri, $options);
         WildcoreApiClient::hasError($response);
         return $response;
     }

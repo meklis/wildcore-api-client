@@ -3,6 +3,7 @@
 namespace Meklis\WildcoreApiClient;
 
 use Meklis\WildcoreApiClient\Clients\GuzzleClient;
+use Meklis\WildcoreApiClient\Models\Diagnostic\Diagnostics;
 use Psr\Http\Message\ResponseInterface;
 
 class WildcoreApiClient
@@ -148,6 +149,10 @@ class WildcoreApiClient
             self::throwError($response);
         }
         return false;
+    }
+
+    public function diagnostics() {
+        return new Diagnostics($this->httpClient);
     }
 
 

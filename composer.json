@@ -3,6 +3,9 @@
     "description": "Rest API client for working with wildcore agent",
     "type": "library",
     "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-mbstring": "*",
         "guzzlehttp/guzzle": "7.4.x-dev",
         "monolog/monolog": "2.x-dev"
     },
@@ -18,8 +21,5 @@
             "email": "max.boyar.a@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require-dev": {
-        "wol-soft/php-json-schema-model-generator": "dev-master"
-    }
+    "minimum-stability": "dev"
 }
