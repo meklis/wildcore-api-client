@@ -155,5 +155,9 @@ class WildcoreApiClient
         return new Diagnostics($this->httpClient);
     }
 
+    public function searchDevice() {
+
+    }
+
 
 }
