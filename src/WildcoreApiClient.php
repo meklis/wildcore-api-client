@@ -151,12 +151,18 @@ class WildcoreApiClient
         return false;
     }
 
+    /**
+     * @return Diagnostics
+     */
     public function diagnostics() {
         return new Diagnostics($this->httpClient);
     }
 
+    /**
+     * @return Models\SearchDevice\SearchDevice
+     */
     public function searchDevice() {
-
+        return new Models\SearchDevice\SearchDevice($this->httpClient);
     }
 
 

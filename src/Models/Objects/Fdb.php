@@ -3,6 +3,8 @@
 namespace Meklis\WildcoreApiClient\Models\Objects;
 
 
+use Meklis\WildcoreApiClient\Models\Devices\Device;
+
 class Fdb
 {
     /**
@@ -16,12 +18,22 @@ class Fdb
     /**
      * @var string
      */
-    protected $macAddress;
+    protected $mac;
 
     /**
      * @var DeviceIface|null
      */
     protected $interface;
+
+    /**
+     * @var string
+     */
+    protected $source;
+
+    /**
+     * @var Device|null
+     */
+    protected $device;
 
     /**
      * @return int
@@ -62,18 +74,18 @@ class Fdb
     /**
      * @return string
      */
-    public function getMacAddress(): string
+    public function getMac(): string
     {
-        return $this->macAddress;
+        return $this->mac;
     }
 
     /**
-     * @param string $macAddress
+     * @param string $mac
      * @return Fdb
      */
-    public function setMacAddress(string $macAddress): Fdb
+    public function setMac(string $mac): Fdb
     {
-        $this->macAddress = $macAddress;
+        $this->mac = $mac;
         return $this;
     }
 
@@ -94,6 +106,43 @@ class Fdb
         $this->interface = $interface;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param string $source
+     * @return Fdb
+     */
+    public function setSource(string $source): Fdb
+    {
+        $this->source = $source;
+        return $this;
+    }
+
+    /**
+     * @return Device|null
+     */
+    public function getDevice(): ?Device
+    {
+        return $this->device;
+    }
+
+    /**
+     * @param Device|null $device
+     * @return Fdb
+     */
+    public function setDevice(?Device $device): Fdb
+    {
+        $this->device = $device;
+        return $this;
+    }
+
 
 
 }

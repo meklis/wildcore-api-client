@@ -3,9 +3,8 @@
 namespace Meklis\WildcoreApiClient\Models\SearchDevice;
 
 use GuzzleHttp\Client;
-use Meklis\WildcoreApiClient\Models\Devices\Device;
 use Meklis\WildcoreApiClient\Models\Model;
-use Meklis\WildcoreApiClient\Models\Objects\DeviceIface;
+use Meklis\WildcoreApiClient\Models\Objects\Fdb;
 
 class FoundMacAddresses extends Model
 {
@@ -17,7 +16,7 @@ class FoundMacAddresses extends Model
        parent::__construct($httpClient, $strictMapping);
 
        foreach ($data as $d) {
-           $this->macAddresses[] = $this->mapper->map($d, FoundMacAddress::class);
+           $this->macAddresses[] = $this->mapper->map($d, Fdb::class);
        }
    }
 

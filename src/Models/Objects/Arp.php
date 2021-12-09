@@ -1,11 +1,8 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\SearchDevice;
+namespace Meklis\WildcoreApiClient\Models\Objects;
 
-use Meklis\WildcoreApiClient\Models\Devices\Device;
-use Meklis\WildcoreApiClient\Models\Objects\DeviceIface;
-
-class FoundArp
+class Arp
 {
     /**
      * @var string
@@ -52,9 +49,9 @@ class FoundArp
 
     /**
      * @param string $ip
-     * @return FoundArp
+     * @return Arp
      */
-    public function setIp(string $ip): FoundArp
+    public function setIp(string $ip): Arp
     {
         $this->ip = $ip;
         return $this;
@@ -70,9 +67,9 @@ class FoundArp
 
     /**
      * @param string $mac
-     * @return FoundArp
+     * @return Arp
      */
-    public function setMac(string $mac): FoundArp
+    public function setMac(string $mac): Arp
     {
         $this->mac = $mac;
         return $this;
@@ -88,9 +85,9 @@ class FoundArp
 
     /**
      * @param string $dinamic
-     * @return FoundArp
+     * @return Arp
      */
-    public function setDinamic(string $dinamic): FoundArp
+    public function setDinamic(string $dinamic): Arp
     {
         $this->dinamic = $dinamic;
         return $this;
@@ -106,9 +103,9 @@ class FoundArp
 
     /**
      * @param string $comment
-     * @return FoundArp
+     * @return Arp
      */
-    public function setComment(string $comment): FoundArp
+    public function setComment(string $comment): Arp
     {
         $this->comment = $comment;
         return $this;
@@ -124,9 +121,9 @@ class FoundArp
 
     /**
      * @param int $vlanId
-     * @return FoundArp
+     * @return Arp
      */
-    public function setVlanId(int $vlanId): FoundArp
+    public function setVlanId(int $vlanId): Arp
     {
         $this->vlanId = $vlanId;
         return $this;
@@ -142,9 +139,9 @@ class FoundArp
 
     /**
      * @param string $status
-     * @return FoundArp
+     * @return Arp
      */
-    public function setStatus(string $status): FoundArp
+    public function setStatus(string $status): Arp
     {
         $this->status = $status;
         return $this;
@@ -160,9 +157,9 @@ class FoundArp
 
     /**
      * @param array $extra
-     * @return FoundArp
+     * @return Arp
      */
-    public function setExtra(array $extra): FoundArp
+    public function setExtra(array $extra): Arp
     {
         $this->extra = $extra;
         return $this;

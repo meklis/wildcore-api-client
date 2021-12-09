@@ -41,7 +41,6 @@ class Diagnostics extends Model
                 'ip' => $ipAddress,
             ]
         ])->getBody(), true)['data'];
-        $response = [];
         return new ArpPings($this->httpClient, $data);
     }
 }
