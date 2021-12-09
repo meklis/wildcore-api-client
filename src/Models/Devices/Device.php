@@ -67,4 +67,204 @@ class Device extends Model
      */
     protected $serial;
 
+    /**
+     * @return string
+     */
+    public function getIp(): string
+    {
+        return $this->ip;
+    }
+
+    /**
+     * @param string $ip
+     * @return Device
+     */
+    public function setIp(string $ip): Device
+    {
+        $this->ip = $ip;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocation(): string
+    {
+        return $this->location;
+    }
+
+    /**
+     * @param string $location
+     * @return Device
+     */
+    public function setLocation(string $location): Device
+    {
+        $this->location = $location;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return Device
+     */
+    public function setName(string $name): Device
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     * @return Device
+     */
+    public function setDescription(string $description): Device
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return DeviceModel|null
+     */
+    public function getModel(): ?DeviceModel
+    {
+        return $this->model;
+    }
+
+    /**
+     * @param DeviceModel|null $model
+     * @return Device
+     */
+    public function setModel(?DeviceModel $model): Device
+    {
+        $this->model = $model;
+        return $this;
+    }
+
+    /**
+     * @return DeviceAccess|null
+     */
+    public function getAccess(): ?DeviceAccess
+    {
+        return $this->access;
+    }
+
+    /**
+     * @param DeviceAccess|null $access
+     * @return Device
+     */
+    public function setAccess(?DeviceAccess $access): Device
+    {
+        $this->access = $access;
+        return $this;
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getParams(): ?array
+    {
+        return $this->params;
+    }
+
+    /**
+     * @param array|null $params
+     * @return Device
+     */
+    public function setParams(?array $params): Device
+    {
+        $this->params = $params;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAt(): string
+    {
+        return $this->updated_at;
+    }
+
+    /**
+     * @param string $updated_at
+     * @return Device
+     */
+    public function setUpdatedAt(string $updated_at): Device
+    {
+        $this->updated_at = $updated_at;
+        return $this;
+    }
+
+    /**
+     * @return false|string
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * @param false|string $created_at
+     * @return Device
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->created_at = $created_at;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMac(): string
+    {
+        return $this->mac;
+    }
+
+    /**
+     * @param string $mac
+     * @return Device
+     */
+    public function setMac(string $mac): Device
+    {
+        $this->mac = $mac;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSerial(): string
+    {
+        return $this->serial;
+    }
+
+    /**
+     * @param string $serial
+     * @return Device
+     */
+    public function setSerial(string $serial): Device
+    {
+        $this->serial = $serial;
+        return $this;
+    }
+
+
+
 }

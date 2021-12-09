@@ -124,11 +124,11 @@ class WildcoreApiClient
         $body = (string) $response->getBody();
         if (strlen($body) > 0) {
             $error = json_decode($body, true);
-            throw new APIException(APIResponse::create([
+            throw new ApiException(ApiResponse::create([
                 'error' => $error['error'],
             ]), $error['error']['description']);
         }
-        throw new APIException(APIResponse::create([
+        throw new ApiException(ApiResponse::create([
             'response' => $response,
         ]), 'The response is not parseable');
     }

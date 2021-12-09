@@ -14,6 +14,7 @@ class GuzzleClient extends Client
     {
         $guzzleConfig = array_merge([
             'base_uri' => $client->getBaseUrl(),
+            'http_errors' => false,
             'headers' => [
                 'X-Auth-Key' => $client->getApiToken(),
                 'Content-Type' => 'application/json',
