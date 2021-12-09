@@ -7,7 +7,8 @@
         "ext-json": "*",
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "7.4.x-dev",
-        "monolog/monolog": "2.x-dev"
+        "monolog/monolog": "2.x-dev",
+        "meklis/array-to-object-mapper": "*"
     },
     "license": "MIT",
     "autoload": {
@@ -19,6 +20,13 @@
         {
             "name": "Max Boyar",
             "email": "max.boyar.a@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "package": "meklis/array-to-object-mapper",
+            "type": "path",
+            "url": "../array-to-object-mapper"
         }
     ],
     "minimum-stability": "dev"

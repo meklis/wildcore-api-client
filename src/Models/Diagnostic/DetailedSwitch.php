@@ -3,10 +3,12 @@
 namespace Meklis\WildcoreApiClient\Models\Diagnostic;
 
 
+use Meklis\WildcoreApiClient\Models\Objects\CablePairDiag;
 use Meklis\WildcoreApiClient\Models\Objects\Counters;
-use Meklis\WildcoreApiClient\Models\Objects\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Objects\Errors;
+use Meklis\WildcoreApiClient\Models\Objects\Fdb;
 use Meklis\WildcoreApiClient\Models\Objects\Rmon;
+use Meklis\WildcoreApiClient\Models\Objects\Vlan;
 
 class DetailedSwitch
 {
@@ -23,14 +25,9 @@ class DetailedSwitch
      */
     protected $operateStatus;
     /**
-     * @var array
+     * @var Fdb[]|null
      */
     protected $fdb;
-
-    /**
-     * @var DeviceIface
-     */
-    protected $interface;
 
     /**
      * @var string|null
@@ -38,12 +35,12 @@ class DetailedSwitch
     protected $description;
 
     /**
-     * @var array
+     * @var Vlan[]|null
      */
     protected $vlans;
 
     /**
-     * @var array
+     * @var CablePairDiag[]|null
      */
     protected $cableDiagnostic;
 

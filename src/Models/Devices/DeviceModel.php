@@ -27,7 +27,7 @@ class DeviceModel extends Model
     protected $key;
 
     /**
-     * @var array
+     * @var array|null
      */
     protected $params;
 

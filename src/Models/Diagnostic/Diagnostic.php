@@ -20,7 +20,7 @@ class Diagnostic
     protected $type;
 
     /**
-     * @var string
+     * @var string[]
      */
     protected $statusFlags;
 

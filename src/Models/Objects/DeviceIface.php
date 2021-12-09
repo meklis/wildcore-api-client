@@ -26,6 +26,26 @@ class DeviceIface
     protected $type;
 
     /**
+     * @var int|null
+     */
+    protected $xid;
+
+    /**
+     * @var int|null
+     */
+    protected $onuNum;
+
+    /**
+     * @var int|null
+     */
+    protected $uni;
+
+    /**
+     * @var string|null
+     */
+    protected $pontype;
+
+    /**
      * @return mixed
      */
     public function getId()

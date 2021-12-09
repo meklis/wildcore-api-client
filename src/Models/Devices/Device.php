@@ -42,7 +42,7 @@ class Device extends Model
     protected ?DeviceAccess $access;
 
     /**
-     * @var array
+     * @var array|null
      */
     protected $params;
 

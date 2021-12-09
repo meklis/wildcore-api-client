@@ -30,5 +30,4 @@ class Rmon
      * @var int
      */
     protected $dropEvents;
-
 }

@@ -2,24 +2,25 @@
 
 namespace Meklis\WildcoreApiClient\Models\Objects;
 
-
-class Fdb
+class OntVendorInfo
 {
     /**
-     * @var int
-     */
-    protected $vlanId;
-    /**
      * @var string
      */
-    protected $status;
-    /**
-     * @var string
-     */
-    protected $macAddress;
+    protected $model;
 
     /**
-     * @var DeviceIface|null
+     * @var string
      */
-    protected $interface;
+    protected $vendor;
+
+    /**
+     * @var string
+     */
+    protected $verHardware;
+
+    /**
+     * @var string
+     */
+    protected $verSoftware;
 }

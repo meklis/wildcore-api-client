@@ -4,7 +4,7 @@ namespace Meklis\WildcoreApiClient\Models;
 
 
 use GuzzleHttp\Client;
-use JMS\Serializer\SerializerBuilder;
+use Meklis\ArrToObjectMapper\Mapper;
 
 abstract class Model
 {
@@ -14,17 +14,17 @@ abstract class Model
     protected $httpClient;
 
     /**
-     * @var \JMS\Serializer\Serializer
+     * @var Mapper
      */
-    protected $serializer;
+    protected $mapper;
 
     /**
      * @param Client $httpClient
      */
-    public function __construct(Client $httpClient = null)
+    public function __construct(Client $httpClient = null, $strictMapping = true)
     {
-        $this->serializer = SerializerBuilder::create()->build();
         $this->httpClient = $httpClient;
+        $this->mapper = (new Mapper())->setStrict($strictMapping);
     }
 
     /**
