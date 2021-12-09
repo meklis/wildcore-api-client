@@ -29,12 +29,12 @@ class DetailedOlt
     protected $fdb;
 
     /**
-     * @var OntInformation
+     * @var OntInformation | null
      */
     protected $ontInformation;
 
     /**
-     * @var OntUniPort
+     * @var OntUniPort[] | null
      */
     protected $uniPorts;
 
@@ -111,40 +111,42 @@ class DetailedOlt
     }
 
     /**
-     * @return OntInformation
+     * @return OntInformation|null
      */
-    public function getOntInformation(): OntInformation
+    public function getOntInformation(): ?OntInformation
     {
         return $this->ontInformation;
     }
 
     /**
-     * @param OntInformation $ontInformation
+     * @param OntInformation|null $ontInformation
      * @return DetailedOlt
      */
-    public function setOntInformation(OntInformation $ontInformation): DetailedOlt
+    public function setOntInformation(?OntInformation $ontInformation): DetailedOlt
     {
         $this->ontInformation = $ontInformation;
         return $this;
     }
 
     /**
-     * @return OntUniPort
+     * @return OntUniPort[]|null
      */
-    public function getUniPorts(): OntUniPort
+    public function getUniPorts(): ?array
     {
         return $this->uniPorts;
     }
 
     /**
-     * @param OntUniPort $uniPorts
+     * @param OntUniPort[]|null $uniPorts
      * @return DetailedOlt
      */
-    public function setUniPorts(OntUniPort $uniPorts): DetailedOlt
+    public function setUniPorts(?array $uniPorts): DetailedOlt
     {
         $this->uniPorts = $uniPorts;
         return $this;
     }
+
+
 
 
 }
