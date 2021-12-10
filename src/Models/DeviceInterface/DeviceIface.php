@@ -1,6 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Objects;
+namespace Meklis\WildcoreApiClient\Models\DeviceInterface;
 
 
 class DeviceIface
@@ -178,7 +178,5 @@ class DeviceIface
         $this->pontype = $pontype;
         return $this;
     }
-
-
 
 }

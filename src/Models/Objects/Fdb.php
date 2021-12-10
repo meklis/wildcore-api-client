@@ -3,6 +3,7 @@
 namespace Meklis\WildcoreApiClient\Models\Objects;
 
 
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
 
 class Fdb

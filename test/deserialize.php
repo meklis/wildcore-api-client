@@ -14,13 +14,7 @@ echo "Device Port: {$response->getFdb()->getInterface()->getName()}\n";
 echo "MAC address: {$response->getFdb()->getMac()}\n";
 echo "Vlan ID: {$response->getFdb()->getVlanId()}\n";
 
-
-//Diagnostic on OLT
-$response = $client->diagnostics()->interfaceDiagnostic("10.15.1.2", 16779014);
-
-echo "Status: {$response->getDetailed()->getOlt()->getStatus()}\n";
-echo "UNI ports: \n";
-print_r($response->getDetailed()->getOlt()->getUniPorts());
+$interface = $client->devices()->getByIp("10.15.1.2")->getInterfaceByName("pon0/0/1:3");
 
 
-
+print_r($interface);

@@ -6,10 +6,17 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 
 
 
+use GuzzleHttp\RequestOptions;
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class Device extends Model
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var string
      */
@@ -265,6 +272,38 @@ class Device extends Model
         return $this;
     }
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     * @return Device
+     */
+    public function setId(int $id): Device
+    {
+        $this->id = $id;
+        return $this;
+    }
 
 
+    /**
+     * @param $interfaceName
+     * @param $from
+     * @return DeviceIface
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ReflectionException
+     */
+    function getInterfaceByName($interfaceName, $from = 'cache') {
+        $data = json_decode($this->httpClient->post("switcher-core/{$from}/parse_interface/{$this->getId()}", [
+            RequestOptions::JSON => [
+                'interface' => $interfaceName,
+            ]
+        ])->getBody(), true)['data'];
+        return $this->mapper->map($data, DeviceIface::class);
+    }
 }

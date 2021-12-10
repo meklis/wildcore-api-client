@@ -6,7 +6,7 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 
 use Meklis\WildcoreApiClient\Models\Model;
 
-class DeviceInterface extends Model
+class DeviceStorageInterface extends Model
 {
 
     const TYPE_ETHER = 'ETH';
@@ -83,7 +83,7 @@ class DeviceInterface extends Model
 
     /**
      * @param mixed $created_at
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
     public function setCreatedAt($created_at)
     {
@@ -101,7 +101,7 @@ class DeviceInterface extends Model
 
     /**
      * @param mixed $updated_at
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
     public function setUpdatedAt($updated_at)
     {
@@ -119,9 +119,9 @@ class DeviceInterface extends Model
 
     /**
      * @param int $device_id
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setDeviceId(int $device_id): DeviceInterface
+    public function setDeviceId(int $device_id): DeviceStorageInterface
     {
         $this->device_id = $device_id;
         return $this;
@@ -137,9 +137,9 @@ class DeviceInterface extends Model
 
     /**
      * @param Device $device
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setDevice(?Device $device): DeviceInterface
+    public function setDevice(?Device $device): DeviceStorageInterface
     {
         $this->device = $device;
         return $this;
@@ -155,9 +155,9 @@ class DeviceInterface extends Model
 
     /**
      * @param int $bind_key
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setBindKey(int $bind_key): DeviceInterface
+    public function setBindKey(int $bind_key): DeviceStorageInterface
     {
         $this->bind_key = $bind_key;
         return $this;
@@ -173,9 +173,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $name
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setName(string $name): DeviceInterface
+    public function setName(string $name): DeviceStorageInterface
     {
         $this->name = $name;
         return $this;
@@ -191,9 +191,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $type
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setType(string $type): DeviceInterface
+    public function setType(string $type): DeviceStorageInterface
     {
         $this->type = $type;
         return $this;
@@ -209,9 +209,9 @@ class DeviceInterface extends Model
 
     /**
      * @param array $params
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setParams(array $params): DeviceInterface
+    public function setParams(array $params): DeviceStorageInterface
     {
         $this->params = $params;
         return $this;
@@ -227,9 +227,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $billing_link
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setBillingLink(string $billing_link): DeviceInterface
+    public function setBillingLink(string $billing_link): DeviceStorageInterface
     {
         $this->billing_link = $billing_link;
         return $this;
@@ -245,9 +245,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $ip
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setIp(string $ip): DeviceInterface
+    public function setIp(string $ip): DeviceStorageInterface
     {
         $this->ip = $ip;
         return $this;
@@ -263,9 +263,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $agreement
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setAgreement(string $agreement): DeviceInterface
+    public function setAgreement(string $agreement): DeviceStorageInterface
     {
         $this->agreement = $agreement;
         return $this;
@@ -281,9 +281,9 @@ class DeviceInterface extends Model
 
     /**
      * @param string $description
-     * @return DeviceInterface
+     * @return DeviceStorageInterface
      */
-    public function setDescription(string $description): DeviceInterface
+    public function setDescription(string $description): DeviceStorageInterface
     {
         $this->description = $description;
         return $this;

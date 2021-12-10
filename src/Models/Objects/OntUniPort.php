@@ -2,6 +2,8 @@
 
 namespace Meklis\WildcoreApiClient\Models\Objects;
 
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
+
 class OntUniPort
 {
     /**

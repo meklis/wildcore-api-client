@@ -3,6 +3,7 @@
 namespace Meklis\WildcoreApiClient;
 
 use Meklis\WildcoreApiClient\Clients\GuzzleClient;
+use Meklis\WildcoreApiClient\Models\Devices\Devices;
 use Meklis\WildcoreApiClient\Models\Diagnostic\Diagnostics;
 use Psr\Http\Message\ResponseInterface;
 
@@ -21,7 +22,7 @@ class WildcoreApiClient
     /**
      * @var GuzzleClient
      */
-    protected $httpClient;
+    public static $httpClient;
 
     /**
      * @var string
@@ -38,7 +39,7 @@ class WildcoreApiClient
         $this->apiToken = $apiToken;
         $this->baseUrl = $baseUrl;
         $this->userAgent = $userAgent;
-        $this->httpClient = new GuzzleClient($this);
+        self::$httpClient = new GuzzleClient($this);
     }
 
     /**
@@ -82,7 +83,7 @@ class WildcoreApiClient
      */
     public function getHttpClient(): GuzzleClient
     {
-        return $this->httpClient;
+        return self::$httpClient;
     }
 
     /**
@@ -91,7 +92,7 @@ class WildcoreApiClient
      */
     public function setHttpClient(GuzzleClient $httpClient): WildcoreApiClient
     {
-        $this->httpClient = $httpClient;
+        self::$httpClient = $httpClient;
         return $this;
     }
 
@@ -155,15 +156,21 @@ class WildcoreApiClient
      * @return Diagnostics
      */
     public function diagnostics() {
-        return new Diagnostics($this->httpClient);
+        return new Diagnostics(self::$httpClient);
     }
 
     /**
      * @return Models\SearchDevice\SearchDevice
      */
     public function searchDevice() {
-        return new Models\SearchDevice\SearchDevice($this->httpClient);
+        return new Models\SearchDevice\SearchDevice(self::$httpClient);
     }
 
+    /**
+     * @return Devices
+     */
+    public function devices() {
+        return new Devices();
+    }
 
 }

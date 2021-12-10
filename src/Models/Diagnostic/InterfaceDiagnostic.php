@@ -2,10 +2,8 @@
 
 namespace Meklis\WildcoreApiClient\Models\Diagnostic;
 
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
-use Meklis\WildcoreApiClient\Models\Diagnostic\Detailed;
-
-use Meklis\WildcoreApiClient\Models\Objects\DeviceIface;
 
 class InterfaceDiagnostic
 {

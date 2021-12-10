@@ -5,6 +5,7 @@ namespace Meklis\WildcoreApiClient\Models;
 
 use GuzzleHttp\Client;
 use Meklis\ArrToObjectMapper\Mapper;
+use Meklis\WildcoreApiClient\WildcoreApiClient;
 
 abstract class Model
 {
@@ -23,17 +24,12 @@ abstract class Model
      */
     public function __construct(Client $httpClient = null, $strictMapping = true)
     {
-        $this->httpClient = $httpClient;
+        if(!$httpClient) {
+            $this->httpClient = WildcoreApiClient::$httpClient;
+        } else {
+            $this->httpClient = $httpClient;
+        }
         $this->mapper = (new Mapper())->setStrict($strictMapping);
-    }
-
-    /**
-     * @param $input
-     * @return static
-     */
-    public static function parse($input)
-    {
-        return null;
     }
 
     /**
