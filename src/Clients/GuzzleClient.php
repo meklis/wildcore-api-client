@@ -26,6 +26,7 @@ class GuzzleClient extends Client
 
     function get($uri, array $options = []): ResponseInterface
     {
+
         $response = parent::get($uri, $options);
         WildcoreApiClient::hasError($response);
         return $response;

@@ -9,6 +9,7 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 use GuzzleHttp\RequestOptions;
 use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Model;
+use Meklis\WildcoreApiClient\Models\SwitcherCore\SwitcherCore;
 
 class Device extends Model
 {
@@ -305,5 +306,12 @@ class Device extends Model
             ]
         ])->getBody(), true)['data'];
         return $this->mapper->map($data, DeviceIface::class);
+    }
+
+    /**
+     * @return SwitcherCore
+     */
+    function getSwitcherCore() {
+        return new SwitcherCore($this, $this->httpClient,  false);
     }
 }
