@@ -9,6 +9,9 @@ use Meklis\WildcoreApiClient\Models\User\Types\CrossAuthData;
 class Users extends Model
 {
     /**
+     * Выдает ключ пользователя для авторизации под другим пользователем
+     * Требует наличия прав в ролях для кросс-авторизации
+     *
      * @param $username
      * @param $expireSeconds
      * @param $userIpAddress

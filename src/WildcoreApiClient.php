@@ -155,6 +155,8 @@ class WildcoreApiClient
     }
 
     /**
+     * Возвращает обьект со списком компонентов
+     *
      * @return Components
      */
     public function components() {
@@ -169,6 +171,8 @@ class WildcoreApiClient
     }
 
     /**
+     * Позволяет работать с сохраненными интерфейсами в системе
+     *
      * @return DeviceStorageInterfaces
      */
     public function deviceInterfaces() {
@@ -176,6 +180,8 @@ class WildcoreApiClient
     }
 
     /**
+     * Позволяет работать с пользователями системы
+     *
      * @return Models\User\Users
      */
     public function users()
