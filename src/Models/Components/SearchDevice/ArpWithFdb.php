@@ -1,6 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\SearchDevice;
+namespace Meklis\WildcoreApiClient\Models\Components\SearchDevice;
 
 use Meklis\WildcoreApiClient\Models\Model;
 use Meklis\WildcoreApiClient\Models\Objects\Arp;

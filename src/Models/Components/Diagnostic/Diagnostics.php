@@ -1,10 +1,9 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Diagnostic;
+namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
-use Meklis\ArrToObjectMapper\Mapper;
-use Meklis\WildcoreApiClient\Models\Devices\Device;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class Diagnostics extends Model
@@ -13,8 +12,8 @@ class Diagnostics extends Model
     /**
      * @param string $deviceIp
      * @param $interface
-     * @return InterfaceDiagnostic
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @return mixed
+     * @throws GuzzleException
      * @throws \ReflectionException
      */
     function interfaceDiagnostic(string $deviceIp, $interface) {
@@ -31,8 +30,7 @@ class Diagnostics extends Model
      * @param $router
      * @param $ipAddress
      * @return ArpPings
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \ReflectionException
+     * @throws GuzzleException
      */
     function arpPing($router, $ipAddress) {
         $data = json_decode($this->httpClient->post('component/diagnostic/arp-ping', [

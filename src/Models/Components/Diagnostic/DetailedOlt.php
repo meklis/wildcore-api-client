@@ -1,6 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Diagnostic;
+namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
 
 use Meklis\WildcoreApiClient\Models\Objects\Fdb;

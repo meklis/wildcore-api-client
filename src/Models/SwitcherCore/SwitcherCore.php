@@ -5,7 +5,6 @@ namespace Meklis\WildcoreApiClient\Models\SwitcherCore;
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
-use Meklis\WildcoreApiClient\Models\Diagnostic\InterfaceDiagnostic;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class SwitcherCore extends Model

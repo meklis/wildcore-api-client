@@ -1,8 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Diagnostic;
-
-use Meklis\WildcoreApiClient\Models\Diagnostic\DetailedSwitch;
+namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
 
 class Detailed
@@ -18,18 +16,18 @@ class Detailed
     protected ?DetailedOlt $olt;
 
     /**
-     * @return \Meklis\WildcoreApiClient\Models\Diagnostic\DetailedSwitch|null
+     * @return \Meklis\WildcoreApiClient\Models\Components\Diagnostic\DetailedSwitch|null
      */
-    public function getSwitch(): ?\Meklis\WildcoreApiClient\Models\Diagnostic\DetailedSwitch
+    public function getSwitch(): ?\Meklis\WildcoreApiClient\Models\Components\Diagnostic\DetailedSwitch
     {
         return $this->switch;
     }
 
     /**
-     * @param \Meklis\WildcoreApiClient\Models\Diagnostic\DetailedSwitch|null $switch
+     * @param \Meklis\WildcoreApiClient\Models\Components\Diagnostic\DetailedSwitch|null $switch
      * @return Detailed
      */
-    public function setSwitch(?\Meklis\WildcoreApiClient\Models\Diagnostic\DetailedSwitch $switch): Detailed
+    public function setSwitch(?\Meklis\WildcoreApiClient\Models\Components\Diagnostic\DetailedSwitch $switch): Detailed
     {
         $this->switch = $switch;
         return $this;

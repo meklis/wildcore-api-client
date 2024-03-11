@@ -1,10 +1,8 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\SearchDevice;
+namespace Meklis\WildcoreApiClient\Models\Components\SearchDevice;
 
 use GuzzleHttp\RequestOptions;
-use Meklis\WildcoreApiClient\Models\Diagnostic\ArpPings;
-use Meklis\WildcoreApiClient\Models\Diagnostic\InterfaceDiagnostic;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class SearchDevice extends Model

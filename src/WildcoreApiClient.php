@@ -3,8 +3,8 @@
 namespace Meklis\WildcoreApiClient;
 
 use Meklis\WildcoreApiClient\Clients\GuzzleClient;
+use Meklis\WildcoreApiClient\Models\Components\Components;
 use Meklis\WildcoreApiClient\Models\Devices\Devices;
-use Meklis\WildcoreApiClient\Models\Diagnostic\Diagnostics;
 use Psr\Http\Message\ResponseInterface;
 
 class WildcoreApiClient
@@ -118,9 +118,9 @@ class WildcoreApiClient
     /**
      * @param ResponseInterface $response
      * @return mixed
-     * @throws APIException
+     * @throws ApiException
      */
-    public static function throwError(ResponseInterface $response)
+    public static function throwError(ResponseInterface $response): mixed
     {
         $body = (string) $response->getBody();
         if (strlen($body) > 0) {
@@ -153,17 +153,10 @@ class WildcoreApiClient
     }
 
     /**
-     * @return Diagnostics
+     * @return Components
      */
-    public function diagnostics() {
-        return new Diagnostics(self::$httpClient);
-    }
-
-    /**
-     * @return Models\SearchDevice\SearchDevice
-     */
-    public function searchDevice() {
-        return new Models\SearchDevice\SearchDevice(self::$httpClient);
+    public function components() {
+        return new Components(self::$httpClient);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Diagnostic;
+namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
 use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
@@ -33,18 +33,18 @@ class InterfaceDiagnostic
     protected $device;
 
     /**
-     * @return \Meklis\WildcoreApiClient\Models\Diagnostic\Detailed
+     * @return \Meklis\WildcoreApiClient\Models\Components\Diagnostic\Detailed
      */
-    public function getDetailed(): \Meklis\WildcoreApiClient\Models\Diagnostic\Detailed
+    public function getDetailed(): \Meklis\WildcoreApiClient\Models\Components\Diagnostic\Detailed
     {
         return $this->detailed;
     }
 
     /**
-     * @param \Meklis\WildcoreApiClient\Models\Diagnostic\Detailed $detailed
+     * @param \Meklis\WildcoreApiClient\Models\Components\Diagnostic\Detailed $detailed
      * @return InterfaceDiagnostic
      */
-    public function setDetailed(\Meklis\WildcoreApiClient\Models\Diagnostic\Detailed $detailed): InterfaceDiagnostic
+    public function setDetailed(\Meklis\WildcoreApiClient\Models\Components\Diagnostic\Detailed $detailed): InterfaceDiagnostic
     {
         $this->detailed = $detailed;
         return $this;

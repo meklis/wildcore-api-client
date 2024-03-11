@@ -1,6 +1,6 @@
 <?php
 
-namespace Meklis\WildcoreApiClient\Models\Diagnostic;
+namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
 use GuzzleHttp\Client;
 use Meklis\WildcoreApiClient\Models\Model;
@@ -9,6 +9,9 @@ class ArpPings extends Model
 {
     protected $pings;
 
+    /**
+     * @throws \ReflectionException
+     */
     function __construct(Client $httpClient = null, $pings = [], $strictMapping = true)
     {
         parent::__construct($httpClient, $strictMapping);

@@ -46,6 +46,134 @@ class DeviceIface
     protected $pontype;
 
     /**
+     * @var string
+     */
+    protected $ifaceName;
+
+    /**
+     * @var int | null
+     */
+    protected $parent;
+
+    /**
+     * @var string | null
+     */
+    protected $_technology;
+
+    /**
+     * @var int | null
+     */
+    protected $_frame;
+
+    /**
+     * @var int | null
+     */
+    protected $_slot;
+    /**
+     * @var int | null
+     */
+    protected $_port;
+    /**
+     * @var int | null
+     */
+    protected $_ont;
+
+    /**
+     * @var int | null
+     */
+    protected $_pon_max_ont_size;
+
+    public function getIfaceName(): string
+    {
+        return $this->ifaceName;
+    }
+
+    public function setIfaceName(string $ifaceName): DeviceIface
+    {
+        $this->ifaceName = $ifaceName;
+        return $this;
+    }
+
+    public function getParent(): ?int
+    {
+        return $this->parent;
+    }
+
+    public function setParent(?int $parent): DeviceIface
+    {
+        $this->parent = $parent;
+        return $this;
+    }
+
+    public function getTechnology(): ?string
+    {
+        return $this->_technology;
+    }
+
+    public function setTechnology(?string $technology): DeviceIface
+    {
+        $this->_technology = $technology;
+        return $this;
+    }
+
+    public function getFrame(): ?int
+    {
+        return $this->_frame;
+    }
+
+    public function setFrame(?int $frame): DeviceIface
+    {
+        $this->_frame = $frame;
+        return $this;
+    }
+
+    public function getSlot(): ?int
+    {
+        return $this->_slot;
+    }
+
+    public function setSlot(?int $slot): DeviceIface
+    {
+        $this->_slot = $slot;
+        return $this;
+    }
+
+    public function getPort(): ?int
+    {
+        return $this->_port;
+    }
+
+    public function setPort(?int $port): DeviceIface
+    {
+        $this->_port = $port;
+        return $this;
+    }
+
+    public function getOnt(): ?int
+    {
+        return $this->_ont;
+    }
+
+    public function setOnt(?int $ont): DeviceIface
+    {
+        $this->_ont = $ont;
+        return $this;
+    }
+
+    public function getPonMaxOntSize(): ?int
+    {
+        return $this->_pon_max_ont_size;
+    }
+
+    public function setPonMaxOntSize(?int $pon_max_ont_size): DeviceIface
+    {
+        $this->_pon_max_ont_size = $pon_max_ont_size;
+        return $this;
+    }
+
+
+
+    /**
      * @return mixed
      */
     public function getId()
