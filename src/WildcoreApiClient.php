@@ -4,6 +4,8 @@ namespace Meklis\WildcoreApiClient;
 
 use Meklis\WildcoreApiClient\Clients\GuzzleClient;
 use Meklis\WildcoreApiClient\Models\Components\Components;
+use Meklis\WildcoreApiClient\Models\Components\Diagnostic\Diagnostics;
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceInterfaces;
 use Meklis\WildcoreApiClient\Models\Devices\Devices;
 use Psr\Http\Message\ResponseInterface;
 
@@ -163,7 +165,14 @@ class WildcoreApiClient
      * @return Devices
      */
     public function devices() {
-        return new Devices();
+        return new Devices(self::$httpClient);
+    }
+
+    /**
+     * @return DeviceInterfaces
+     */
+    public function deviceInterfaces() {
+        return new DeviceInterfaces(self::$httpClient);
     }
 
 }

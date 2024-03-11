@@ -3,7 +3,7 @@
 namespace Meklis\WildcoreApiClient\Models\DeviceInterface;
 
 
-class DeviceIface
+class DeviceSwcoreIface
 {
     /**
      * @var int
@@ -88,7 +88,7 @@ class DeviceIface
         return $this->ifaceName;
     }
 
-    public function setIfaceName(string $ifaceName): DeviceIface
+    public function setIfaceName(string $ifaceName): DeviceSwcoreIface
     {
         $this->ifaceName = $ifaceName;
         return $this;
@@ -99,7 +99,7 @@ class DeviceIface
         return $this->parent;
     }
 
-    public function setParent(?int $parent): DeviceIface
+    public function setParent(?int $parent): DeviceSwcoreIface
     {
         $this->parent = $parent;
         return $this;
@@ -110,7 +110,7 @@ class DeviceIface
         return $this->_technology;
     }
 
-    public function setTechnology(?string $technology): DeviceIface
+    public function setTechnology(?string $technology): DeviceSwcoreIface
     {
         $this->_technology = $technology;
         return $this;
@@ -121,7 +121,7 @@ class DeviceIface
         return $this->_frame;
     }
 
-    public function setFrame(?int $frame): DeviceIface
+    public function setFrame(?int $frame): DeviceSwcoreIface
     {
         $this->_frame = $frame;
         return $this;
@@ -132,7 +132,7 @@ class DeviceIface
         return $this->_slot;
     }
 
-    public function setSlot(?int $slot): DeviceIface
+    public function setSlot(?int $slot): DeviceSwcoreIface
     {
         $this->_slot = $slot;
         return $this;
@@ -143,7 +143,7 @@ class DeviceIface
         return $this->_port;
     }
 
-    public function setPort(?int $port): DeviceIface
+    public function setPort(?int $port): DeviceSwcoreIface
     {
         $this->_port = $port;
         return $this;
@@ -154,7 +154,7 @@ class DeviceIface
         return $this->_ont;
     }
 
-    public function setOnt(?int $ont): DeviceIface
+    public function setOnt(?int $ont): DeviceSwcoreIface
     {
         $this->_ont = $ont;
         return $this;
@@ -165,7 +165,7 @@ class DeviceIface
         return $this->_pon_max_ont_size;
     }
 
-    public function setPonMaxOntSize(?int $pon_max_ont_size): DeviceIface
+    public function setPonMaxOntSize(?int $pon_max_ont_size): DeviceSwcoreIface
     {
         $this->_pon_max_ont_size = $pon_max_ont_size;
         return $this;
@@ -191,9 +191,9 @@ class DeviceIface
 
     /**
      * @param string $name
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setName(string $name): DeviceIface
+    public function setName(string $name): DeviceSwcoreIface
     {
         $this->name = $name;
         return $this;
@@ -209,9 +209,9 @@ class DeviceIface
 
     /**
      * @param string $key
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setKey(string $key): DeviceIface
+    public function setKey(string $key): DeviceSwcoreIface
     {
         $this->_key = $key;
         return $this;
@@ -227,9 +227,9 @@ class DeviceIface
 
     /**
      * @param string $type
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setType(string $type): DeviceIface
+    public function setType(string $type): DeviceSwcoreIface
     {
         $this->type = $type;
         return $this;
@@ -245,9 +245,9 @@ class DeviceIface
 
     /**
      * @param int|null $xid
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setXid(?int $xid): DeviceIface
+    public function setXid(?int $xid): DeviceSwcoreIface
     {
         $this->xid = $xid;
         return $this;
@@ -263,9 +263,9 @@ class DeviceIface
 
     /**
      * @param int|null $onuNum
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setOnuNum(?int $onuNum): DeviceIface
+    public function setOnuNum(?int $onuNum): DeviceSwcoreIface
     {
         $this->onuNum = $onuNum;
         return $this;
@@ -281,9 +281,9 @@ class DeviceIface
 
     /**
      * @param int|null $uni
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setUni(?int $uni): DeviceIface
+    public function setUni(?int $uni): DeviceSwcoreIface
     {
         $this->uni = $uni;
         return $this;
@@ -299,9 +299,9 @@ class DeviceIface
 
     /**
      * @param string|null $pontype
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      */
-    public function setPontype(?string $pontype): DeviceIface
+    public function setPontype(?string $pontype): DeviceSwcoreIface
     {
         $this->pontype = $pontype;
         return $this;

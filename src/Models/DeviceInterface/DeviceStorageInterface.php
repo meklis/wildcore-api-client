@@ -1,9 +1,10 @@
 <?php
 
 
-namespace Meklis\WildcoreApiClient\Models\Devices;
+namespace Meklis\WildcoreApiClient\Models\DeviceInterface;
 
 
+use Meklis\WildcoreApiClient\Models\Devices\Device;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class DeviceStorageInterface extends Model
@@ -15,11 +16,19 @@ class DeviceStorageInterface extends Model
     const TYPE_ONU = 'ONU';
     const TYPE_UNI = 'UNI';
 
+
     /**
+     * @var int
+     */
+    protected $id;
+
+    /**
+     * @var string
      */
     protected $created_at;
 
     /**
+     * @var string
      */
     protected $updated_at;
 
@@ -286,6 +295,24 @@ class DeviceStorageInterface extends Model
     public function setDescription(string $description): DeviceStorageInterface
     {
         $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     * @return DeviceStorageInterface
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
         return $this;
     }
 

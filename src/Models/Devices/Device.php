@@ -7,7 +7,7 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 
 
 use GuzzleHttp\RequestOptions;
-use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceSwcoreIface;
 use Meklis\WildcoreApiClient\Models\Model;
 use Meklis\WildcoreApiClient\Models\SwitcherCore\SwitcherCore;
 
@@ -295,7 +295,7 @@ class Device extends Model
     /**
      * @param $interfaceName
      * @param $from
-     * @return DeviceIface
+     * @return DeviceSwcoreIface
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ReflectionException
      */
@@ -305,7 +305,7 @@ class Device extends Model
                 'interface' => $interfaceName,
             ]
         ])->getBody(), true)['data'];
-        return $this->mapper->map($data, DeviceIface::class);
+        return $this->mapper->map($data, DeviceSwcoreIface::class);
     }
 
     /**

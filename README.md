@@ -68,3 +68,8 @@ Array
 
  */
 ```
+
+
+### Developer recommendations
+
+* For generate classes from JSON - https://jacobdekeizer.github.io/json-to-php-generator/#/

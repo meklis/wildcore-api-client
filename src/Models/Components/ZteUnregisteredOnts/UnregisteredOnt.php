@@ -2,10 +2,8 @@
 
 namespace Meklis\WildcoreApiClient\Models\Components\ZteUnregisteredOnts;
 
-use Meklis\WildcoreApiClient\Models\Components\Diagnostic\InterfaceDiagnostic;
-use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceIface;
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceSwcoreIface;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
-use Meklis\WildcoreApiClient\Models\Devices\DeviceStorageInterface;
 
 class UnregisteredOnt
 {
@@ -33,7 +31,7 @@ class UnregisteredOnt
     protected $fwVersion;
 
     /**
-     * @var DeviceIface
+     * @var DeviceSwcoreIface
      */
     protected $interface;
 
@@ -224,12 +222,12 @@ class UnregisteredOnt
         return $this->serial ? $this->serial : $this->macAddress;
     }
 
-    public function getInterface(): DeviceIface
+    public function getInterface(): DeviceSwcoreIface
     {
         return $this->interface;
     }
 
-    public function setInterface(DeviceIface $interface): UnregisteredOnt
+    public function setInterface(DeviceSwcoreIface $interface): UnregisteredOnt
     {
         $this->interface = $interface;
         return $this;

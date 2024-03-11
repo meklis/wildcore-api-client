@@ -4,27 +4,29 @@ namespace Meklis\WildcoreApiClient\Models\Components\Diagnostic;
 
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
+use Meklis\WildcoreApiClient\Models\Components\Diagnostic\Results\DiagnosticResult;
+use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceStorageInterface;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class Diagnostics extends Model
 {
 
     /**
-     * @param string $deviceIp
-     * @param $interface
-     * @return mixed
+     * @param DeviceStorageInterface $iface
+     * @param $from
+     * @return DiagnosticResult
      * @throws GuzzleException
      * @throws \ReflectionException
      */
-    function interfaceDiagnostic(string $deviceIp, $interface) {
-        $data = json_decode($this->httpClient->post('component/diagnostic/interface-diag', [
-           RequestOptions::JSON => [
-               'device' => $deviceIp,
-               'interface' => $interface,
+    function interfaceDiagnostic(DeviceStorageInterface $iface, $from = 'cache') {
+        $data = json_decode($this->httpClient->get("component/diagnostic/interface/{$iface->getId()}/diag", [
+           'query' => [
+               'from' => $from,
            ]
         ])->getBody(), true)['data'];
-        return $this->mapper->map($data, InterfaceDiagnostic::class);
+        return $this->mapper->map($data, DiagnosticResult::class);
     }
+
 
     /**
      * @param $router

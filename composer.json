@@ -6,9 +6,9 @@
         "php": "7.*|8.*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "7.9.x-dev",
         "monolog/monolog": "2.x-dev",
-        "meklis/array-to-object-mapper": "*"
+        "meklis/array-to-object-mapper": "*",
+        "guzzlehttp/guzzle": "7.9.x-dev"
     },
     "license": "MIT",
     "autoload": {
