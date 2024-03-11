@@ -15,7 +15,7 @@ echo "Device Port: {$response->getFdb()->getInterface()->getName()}\n";
 echo "MAC address: {$response->getFdb()->getMac()}\n";
 echo "Vlan ID: {$response->getFdb()->getVlanId()}\n";
 
-$interface = $client->devices()->getByIp("10.15.1.2")->getInterfaceByName("pon0/0/1:3");
+$interface = $client->devices()->getByIp("10.15.1.2")->getSwcoreInterfaceByName("pon0/0/1:3");
 
 
 print_r($interface);

@@ -2,6 +2,7 @@
 
 namespace Meklis\WildcoreApiClient\Models\Devices;
 
+use GuzzleHttp\RequestOptions;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class Devices extends Model
@@ -34,4 +35,10 @@ class Devices extends Model
         return new DevicesList(json_decode($this->httpClient->get('device')->getBody(), true)['data'], $this->httpClient);
     }
 
+    function create(Device $device)
+    {
+        return $this->mapper->map(json_decode($this->httpClient->post('device', [
+            RequestOptions::JSON => $device->getAsArray()
+        ])->getBody(), true)['data'], Device::class);
+    }
 }

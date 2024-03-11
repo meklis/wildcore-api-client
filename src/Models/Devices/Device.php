@@ -299,7 +299,7 @@ class Device extends Model
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ReflectionException
      */
-    function getInterfaceByName($interfaceName, $from = 'cache') {
+    function getSwcoreInterfaceByName($interfaceName, $from = 'cache') {
         $data = json_decode($this->httpClient->post("switcher-core/{$from}/parse_interface/{$this->getId()}", [
             RequestOptions::JSON => [
                 'interface' => $interfaceName,

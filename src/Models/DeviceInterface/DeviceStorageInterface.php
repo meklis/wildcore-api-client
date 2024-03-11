@@ -16,6 +16,8 @@ class DeviceStorageInterface extends Model
     const TYPE_ONU = 'ONU';
     const TYPE_UNI = 'UNI';
 
+    const url = 'device-interface';
+
 
     /**
      * @var int
@@ -315,7 +317,4 @@ class DeviceStorageInterface extends Model
         $this->id = $id;
         return $this;
     }
-
-
-
 }
