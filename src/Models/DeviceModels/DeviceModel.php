@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Meklis\WildcoreApiClient\Models\Devices;
+namespace Meklis\WildcoreApiClient\Models\DeviceModels;
 
 
 use Meklis\WildcoreApiClient\Models\Model;

@@ -7,7 +7,9 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 
 
 use GuzzleHttp\RequestOptions;
+use Meklis\WildcoreApiClient\Models\DeviceAccess\DeviceAccess;
 use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceSwcoreIface;
+use Meklis\WildcoreApiClient\Models\DeviceModels\DeviceModel;
 use Meklis\WildcoreApiClient\Models\Model;
 use Meklis\WildcoreApiClient\Models\SwitcherCore\SwitcherCore;
 
@@ -39,14 +41,9 @@ class Device extends Model
      */
     protected $description = '';
 
-    /**
-     * @var DeviceModel|null
-     */
+
     protected ?DeviceModel $model;
 
-    /**
-     * @var DeviceAccess|null
-     */
     protected ?DeviceAccess $access;
 
     /**

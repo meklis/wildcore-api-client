@@ -4,7 +4,6 @@ namespace Meklis\WildcoreApiClient\Models\Components\HuaweiUnregisteredOnts;
 
 use GuzzleHttp\RequestOptions;
 use Meklis\WildcoreApiClient\Models\Devices\Device;
-use Meklis\WildcoreApiClient\Models\Devices\DevicesList;
 use Meklis\WildcoreApiClient\Models\Model;
 
 class HuaweiUnregisteredOnts extends Model

@@ -1,10 +1,9 @@
 <?php
 
 
-namespace Meklis\WildcoreApiClient\Models\Devices;
+namespace Meklis\WildcoreApiClient\Models\DeviceAccess;
 
 
-use InvalidArgumentException;
 use Meklis\WildcoreApiClient\Models\Model;
 
 
