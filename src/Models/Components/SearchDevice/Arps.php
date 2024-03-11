@@ -3,8 +3,8 @@
 namespace Meklis\WildcoreApiClient\Models\Components\SearchDevice;
 
 use GuzzleHttp\Client;
+use Meklis\WildcoreApiClient\Models\Components\SearchDevice\SearchingModels\Arp;
 use Meklis\WildcoreApiClient\Models\Model;
-use Meklis\WildcoreApiClient\Models\Objects\Arp;
 
 class Arps extends Model
 {

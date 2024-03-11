@@ -2,9 +2,9 @@
 
 namespace Meklis\WildcoreApiClient\Models\Components\SearchDevice;
 
+use Meklis\WildcoreApiClient\Models\Components\SearchDevice\SearchingModels\Arp;
+use Meklis\WildcoreApiClient\Models\Components\SearchDevice\SearchingModels\Fdb;
 use Meklis\WildcoreApiClient\Models\Model;
-use Meklis\WildcoreApiClient\Models\Objects\Arp;
-use Meklis\WildcoreApiClient\Models\Objects\Fdb;
 
 class ArpWithFdb extends Model
 {
