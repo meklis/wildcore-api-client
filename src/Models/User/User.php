@@ -18,7 +18,6 @@ class User
 
 
     /**
-     * @morm.name=id
      * @var int
      */
     protected $id;
@@ -58,12 +57,12 @@ class User
     protected $last_activity;
 
     /**
-     * @var
+     * @var string
      */
     protected $status;
 
     /**
-     * @var
+     * @var string
      */
     protected $language;
 
@@ -223,8 +222,6 @@ class User
         $this->deviceGroups = $deviceGroups;
         return $this;
     }
-
-
 
 
 }

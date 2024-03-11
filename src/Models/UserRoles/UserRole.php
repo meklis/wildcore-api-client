@@ -10,12 +10,12 @@ class UserRole
     protected $id;
 
     /**
-     * @var array
+     * @var array | null
      */
     protected $params;
 
     /**
-     * @var string;
+     * @var string
      */
     protected $name;
 

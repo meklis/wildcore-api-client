@@ -31,7 +31,7 @@ class Devices extends Model
      * @return DevicesList
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    function getAll() {
+    function list() {
         return new DevicesList(json_decode($this->httpClient->get('device')->getBody(), true)['data'], $this->httpClient);
     }
 
