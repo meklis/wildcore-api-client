@@ -16,6 +16,13 @@ class DeviceStorageInterface extends Model
     const TYPE_ONU = 'ONU';
     const TYPE_UNI = 'UNI';
 
+    const STATUS_UP = 'Up';
+    const STATUS_Down = 'Down';
+    const STATUS_ONLINE = 'Online';
+    const STATUS_OFFLINE = 'Offline';
+    const STATUS_POWER_OFF = 'PowerOff';
+    const STATUS_LOS = 'LOS';
+
     const url = 'device-interface';
 
 
@@ -28,6 +35,11 @@ class DeviceStorageInterface extends Model
      * @var string
      */
     protected $created_at;
+
+    /**
+     * @var string
+     */
+    protected $status;
 
     /**
      * @var string
@@ -317,4 +329,18 @@ class DeviceStorageInterface extends Model
         $this->id = $id;
         return $this;
     }
+
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(string $status): DeviceStorageInterface
+    {
+        $this->status = $status;
+        return $this;
+    }
+
+
+
 }

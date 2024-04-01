@@ -32,12 +32,18 @@ class Devices extends Model
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     function list() {
-        $data = json_decode($this->httpClient->get('device')->getBody(), true)['data'];
+        $data = json_decode($this->httpClient->get('device?limit=999999')->getBody(), true)['data'];
         return array_map(function ($d) {
             return $this->mapper->map($d, Device::class);
         }, $data);
     }
 
+    /**
+     * @param Device $device
+     * @return Device
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ReflectionException
+     */
     function create(Device $device)
     {
         return $this->mapper->map(json_decode($this->httpClient->post('device', [

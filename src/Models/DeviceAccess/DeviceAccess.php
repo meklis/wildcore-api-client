@@ -15,7 +15,7 @@ class DeviceAccess extends Model
     protected $id;
 
     /**
-     * @var array
+     * @var array | null
      */
     protected $params = [];
 
@@ -58,9 +58,9 @@ class DeviceAccess extends Model
     }
 
     /**
-     * @return array
+     * @return array | null
      */
-    public function getParams(): array
+    public function getParams()
     {
         return $this->params;
     }

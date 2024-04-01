@@ -2,7 +2,9 @@
 
 namespace Meklis\WildcoreApiClient\Models\DeviceGroups;
 
-class DeviceGroup
+use Meklis\WildcoreApiClient\Models\Model;
+
+class DeviceGroup extends Model
 {
     /**
      * @var string
@@ -17,6 +19,24 @@ class DeviceGroup
      * @var string
      */
     protected $description;
+
+    /**
+     * @var int
+     */
+    protected $id;
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): DeviceGroup
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+
 
     public function getCreatedAt(): string
     {

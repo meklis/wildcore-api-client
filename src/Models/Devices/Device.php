@@ -8,6 +8,8 @@ namespace Meklis\WildcoreApiClient\Models\Devices;
 
 use GuzzleHttp\RequestOptions;
 use Meklis\WildcoreApiClient\Models\DeviceAccess\DeviceAccess;
+use Meklis\WildcoreApiClient\Models\DeviceGroups\DeviceGroup;
+use Meklis\WildcoreApiClient\Models\DeviceGroups\DeviceGroups;
 use Meklis\WildcoreApiClient\Models\DeviceInterface\DeviceSwcoreIface;
 use Meklis\WildcoreApiClient\Models\DeviceModels\DeviceModel;
 use Meklis\WildcoreApiClient\Models\Model;
@@ -29,6 +31,11 @@ class Device extends Model
      * @var string
      */
     protected $location = '';
+
+    /**
+     * @var DeviceGroup
+     */
+    protected $group = null;
 
 
     /**
@@ -79,6 +86,19 @@ class Device extends Model
     {
         return $this->ip;
     }
+
+    public function getGroup(): ?DeviceGroup
+    {
+        return $this->group;
+    }
+
+    public function setGroup(?DeviceGroup $group): Device
+    {
+        $this->group = $group;
+        return $this;
+    }
+
+
 
     /**
      * @param string $ip
