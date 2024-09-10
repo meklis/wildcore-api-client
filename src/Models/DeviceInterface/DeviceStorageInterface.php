@@ -52,7 +52,7 @@ class DeviceStorageInterface extends Model
     protected $device_id;
 
     /**
-     * @var Device
+     * @var Device|null
      */
     protected ?Device $device = null;
 
