@@ -102,6 +102,17 @@ class DeviceStorageInterface extends Model
      */
     protected $comment = '';
 
+
+    /**
+     * @var null|array
+     */
+    protected $coordinates = null;
+
+    /**
+     * @var null|string
+     */
+    protected $status_changed = null;
+
     /**
      * @return mixed
      */
@@ -362,5 +373,42 @@ class DeviceStorageInterface extends Model
     {
         $this->comment = $comment;
     }
+
+    /**
+     * @return array|null
+     */
+    public function getCoordinates()
+    {
+        return $this->coordinates;
+    }
+
+    /**
+     * @param $coordinates
+     * @return $this
+     */
+    public function setCoordinates($coordinates)
+    {
+        $this->coordinates = $coordinates;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getStatusChanged()
+    {
+        return $this->status_changed;
+    }
+
+    /**
+     * @param $status_changed
+     * @return $this
+     */
+    public function setStatusChanged($status_changed)
+    {
+        $this->status_changed = $status_changed;
+        return $this;
+    }
+
 
 }
