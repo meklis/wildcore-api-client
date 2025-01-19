@@ -37,7 +37,7 @@ class DeviceStorageInterface extends Model
     protected $created_at;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $status;
 
@@ -97,6 +97,9 @@ class DeviceStorageInterface extends Model
     protected $description = '';
 
 
+    /**
+     * @var string
+     */
     protected $comment = '';
 
     /**
@@ -333,7 +336,7 @@ class DeviceStorageInterface extends Model
         return $this;
     }
 
-    public function getStatus(): string
+    public function getStatus(): string | null
     {
         return $this->status;
     }
@@ -359,8 +362,5 @@ class DeviceStorageInterface extends Model
     {
         $this->comment = $comment;
     }
-
-
-
 
 }
