@@ -96,6 +96,9 @@ class DeviceStorageInterface extends Model
      */
     protected $description = '';
 
+
+    protected $comment = '';
+
     /**
      * @return mixed
      */
@@ -340,6 +343,23 @@ class DeviceStorageInterface extends Model
         $this->status = $status;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param string $comment
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+    }
+
 
 
 
